@@ -1,0 +1,48 @@
+@host = http://localhost:3010/api/
+@auth_token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTExMDI5OTUsImV4cCI6MTYxMTI3NTc5NSwic3ViIjoiNCB0cnVlIn0._94VATSv2XwAxK0J9rBF4Zw8XgL1-YSedcXYRp-GQCg
+@user_token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTExODQ1OTEsImV4cCI6MTYxMTM1NzM5MSwic3ViIjoiMiBmYWxzZSJ9.WZvuhE85r9DkF2qILHmhy5Zg7_JOTnSmAPXR6BP-1bk
+
+###
+
+GET {{host}}clients?pet=Dourado HTTP/1.1
+Authorization: {{user_token}}
+
+###
+
+POST {{host}}clients HTTP/1.1
+Content-Type: application/json
+Authorization: {{user_token}}
+
+{
+  "client": {
+    "name": "Cliente criado 2",
+    "cpf": "12345678901",
+    "address": "Rua 1",
+    "phone": "1234352"
+  }
+}
+
+###
+
+GET {{host}}clients/4 HTTP/1.1
+Authorization: {{auth_token}}
+
+###
+
+PUT {{host}}clients/6 HTTP/1.1
+Content-Type: application/json
+Authorization: {{user_token}}
+
+{
+  "client": {
+    "cpf": "12345678901",
+    "address": "Rua 1",
+    "phone": "33620001"
+  }
+}
+###
+
+DELETE  {{host}}clients/1 HTTP/1.1
+Authorization: {{auth_token}}
+
+###

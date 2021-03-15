@@ -1,0 +1,43 @@
+@host = http://localhost:3010/api/
+@auth_token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTExODExNTgsImV4cCI6MTYxMTM1Mzk1OCwic3ViIjoiMSB0cnVlIn0.ZJjry2yumvVclC0Oz1HcqM0367qtvz5BmQRgakD4QFU
+@user_token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTExMDMwNTEsImV4cCI6MTYxMTI3NTg1MSwic3ViIjoiNSBmYWxzZSJ9.gzQfZBDKsUGF09g8k7he-TPtX4BuMvDHZFnm1XE3j0o
+###
+
+GET {{host}}appointments HTTP/1.1
+Authorization: {{auth_token}}
+
+###
+
+POST {{host}}appointments HTTP/1.1
+Content-Type: application/json
+Authorization: {{auth_token}}
+
+{
+  "appointment": {
+    "pet_id": 5,
+    "description": "uma descrição aí..."
+  }
+}
+
+###
+
+GET {{host}}appointments/2 HTTP/1.1
+Authorization: {{auth_token}}
+
+###
+
+PUT {{host}}appointments/3 HTTP/1.1
+Content-Type: application/json
+Authorization: {{auth_token}}
+
+{
+  "appointment": {
+    "description": "uma descrição aí alterada..."
+  }
+}
+###
+
+DELETE  {{host}}appointments/2 HTTP/1.1
+Authorization: {{user_token}}
+
+###
