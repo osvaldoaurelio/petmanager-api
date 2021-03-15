@@ -8,7 +8,7 @@ module.exports = {
       "users",
       [
         {
-          name: "Osvaldo Aurélio",
+          name: "John Doe",
           username: "admin",
           password: await hash("admin", 8),
           is_admin: true,
@@ -16,17 +16,17 @@ module.exports = {
           updated_at: new Date(),
         },
         {
-          name: "Aurélio Ribeiro",
+          name: "Carlos Henrique",
           username: "funcionario1",
-          password: await hash("123456", 8),
+          password: await hash("funcionario1", 8),
           is_admin: false,
           created_at: new Date(),
           updated_at: new Date(),
         },
         {
-          name: "Ribeiro Silva",
+          name: "Henrique Carlos",
           username: "funcionario2",
-          password: await hash("123456", 8),
+          password: await hash("funcionario2", 8),
           is_admin: false,
           created_at: new Date(),
           updated_at: new Date(),

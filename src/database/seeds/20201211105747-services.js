@@ -16,8 +16,8 @@ module.exports = {
         {
           pet_id: sample_id(await Pet.findAll(select_id)),
           description: "Serviço de exemplo preenchida no seed 1",
-          initial_date: new Date(2021, 1, 1, 12),
-          final_date: new Date(2021, 2, 1, 12),
+          initial_date: new Date(2021, 2, 1, 12),
+          final_date: new Date(2021, 2, 4, 12),
           price: 50,
           created_at: new Date(),
           updated_at: new Date(),
@@ -25,8 +25,8 @@ module.exports = {
         {
           pet_id: sample_id(await Pet.findAll(select_id)),
           description: "Serviço de exemplo preenchida no seed 2",
-          initial_date: new Date(2021, 2, 2, 13),
-          final_date: new Date(2021, 3, 2, 13),
+          initial_date: new Date(2021, 2, 11, 13),
+          final_date: new Date(2021, 2, 12, 13),
           price: 100,
           created_at: new Date(),
           updated_at: new Date(),
@@ -34,8 +34,8 @@ module.exports = {
         {
           pet_id: sample_id(await Pet.findAll(select_id)),
           description: "Serviço de exemplo preenchida no seed 3",
-          initial_date: new Date(2021, 3, 3, 11),
-          final_date: new Date(2021, 4, 3, 11),
+          initial_date: new Date(2021, 3, 15, 11),
+          final_date: new Date(2021, 3, 16, 11),
           price: 250,
           created_at: new Date(),
           updated_at: new Date(),
@@ -43,8 +43,8 @@ module.exports = {
         {
           pet_id: sample_id(await Pet.findAll(select_id)),
           description: "Serviço de exemplo preenchida no seed 4",
-          initial_date: new Date(2021, 4, 4, 10),
-          final_date: new Date(2021, 5, 4, 10),
+          initial_date: new Date(2021, 4, 1, 10),
+          final_date: new Date(2021, 4, 2, 10),
           price: 150,
           created_at: new Date(),
           updated_at: new Date(),

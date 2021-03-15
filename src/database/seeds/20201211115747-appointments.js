@@ -16,14 +16,14 @@ module.exports = {
         {
           pet_id: sample_id(await Pet.findAll(select_id)),
           description: "Serviço de exemplo preenchida no seed 1",
-          date: new Date(2021, 1, 1, 12),
+          date: new Date(2021, 2, 15, 12),
           created_at: new Date(),
           updated_at: new Date(),
         },
         {
           pet_id: sample_id(await Pet.findAll(select_id)),
           description: "Serviço de exemplo preenchida no seed 2",
-          date: new Date(2021, 2, 2, 13),
+          date: new Date(2021, 2, 15, 13),
           created_at: new Date(),
           updated_at: new Date(),
         },
